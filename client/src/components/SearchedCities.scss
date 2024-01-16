@@ -1,0 +1,9 @@
+.SearchedCities {
+  .CityCard {
+    transition: all 0.2s ease-in-out;
+    &.isSelected {
+      transform: scale(1.1);
+      background-color: #efebff;
+    }
+  }
+}

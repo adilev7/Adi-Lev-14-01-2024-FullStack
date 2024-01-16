@@ -1,0 +1,27 @@
+$purple: #a59ad7;
+$pink: #fe76c2;
+$yellow: #ffe600;
+$blue: #2525ff;
+$light-blue: lighten($blue, 25%);
+$dark-blue: #12127e;
+$green: #0bf387;
+$light-red: #fff3f3;
+$light: #fafcff;
+$dark: #3d4a51;
+$primary: $purple;
+$link: $blue;
+$blue-gradient: linear-gradient(to right, #12127e, #000);
+
+:export {
+  purple: $purple;
+  pink: $pink;
+  yellow: $yellow;
+  lightBlue: $light-blue;
+  blue: $blue;
+  darkBlue: $dark-blue;
+  green: $green;
+  lightRed: $light-red;
+  light: $light;
+  dark: $dark;
+  blueGradient: $blue-gradient;
+}
