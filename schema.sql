@@ -16,6 +16,14 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Current Database: `weather_app`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `weather_app` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+
+USE `weather_app`;
+
+--
 -- Table structure for table `cities_weather`
 --
 
@@ -37,7 +45,7 @@ CREATE TABLE `cities_weather` (
 
 LOCK TABLES `cities_weather` WRITE;
 /*!40000 ALTER TABLE `cities_weather` DISABLE KEYS */;
-INSERT INTO `cities_weather` VALUES ('316938','Ankara',4.9,'Mostly cloudy'),('56912','Anqing',5.9,'Overcast'),('59083','Anyang',0.2,'Overcast');
+INSERT INTO `cities_weather` VALUES ('102138','Anshan',5,'Cloudy'),('227088','Antananarivo',22.2,'Mostly cloudy'),('316938','Ankara',4.9,'Mostly cloudy'),('56912','Anqing',5.9,'Overcast'),('59083','Anyang',0.2,'Overcast');
 /*!40000 ALTER TABLE `cities_weather` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +69,7 @@ CREATE TABLE `favorite_cities` (
 
 LOCK TABLES `favorite_cities` WRITE;
 /*!40000 ALTER TABLE `favorite_cities` DISABLE KEYS */;
-INSERT INTO `favorite_cities` VALUES ('711mzuijjlrgltiop','316938'),('711mzuijjlrgltiop','56912'),('711mzuijjlrgltiop','59083');
+INSERT INTO `favorite_cities` VALUES ('711mzuijjlrgltiop','227088'),('711mzuijjlrgltiop','316938'),('711mzuijjlrgltiop','56912'),('711mzuijjlrgltiop','59083');
 /*!40000 ALTER TABLE `favorite_cities` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -74,4 +82,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-17  7:39:42
+-- Dump completed on 2024-01-17  8:18:38
