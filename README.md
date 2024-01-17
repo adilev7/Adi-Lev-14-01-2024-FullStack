@@ -79,13 +79,21 @@ along with tables called '**_cities_weather_**' and '**_favorite_cities_**'.
 </tbody>
 </table>
 
+<h2>Before starting:</h2>  
 
-<h2>USAGE:</h2>
-
-1. **Start the application**  
+1. **Choose app environment**  
+   In the **_.env_** file you can choose the environment mode (development / production).
+   *  `NODE_ENV=development`  
+         Will tell the server to use dummy data (stored in the server directory) instead of fetching data from <a href="https://developer.accuweather.com/apis">AccuWeather API</a>
+   *  `NODE_ENV=production`
+         Will tell the server to use data fetched from <a href="https://developer.accuweather.com/apis">AccuWeather API</a>
+2. **Start the application**  
    To start the entire application (client and server),  
    go to the '**_server_**' directory and run `npm run dev`.  
-   Open the browser on <a href="http://localhost:5173/">http://localhost:5173/</a>.  
+
+<h2>USAGE:</h2>  
+
+1. **Open the browser on <a href="http://localhost:5173/">http://localhost:5173/</a>**  
 
    <img width="1000" alt="image" src="https://github.com/adilev7/Adi-Lev-14-01-2024-FullStack/assets/71292432/d8bbe499-de47-4d79-9a15-108ab9cfb28c">  
    
