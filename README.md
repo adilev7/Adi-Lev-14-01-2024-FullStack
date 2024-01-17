@@ -1,5 +1,5 @@
 <h1 align="center">Weather App</h1>
-<h3 align="center">A full stack weather app based on <a href="https://developer.accuweather.com/apis">AccuWeather API</a></h3>
+<h3 align="center">A full stack weather app based on <a href="https://developer.accuweather.com/apis" target="_blank">AccuWeather API</a></h3>
 
 <h2>Built with:</h2>
 
@@ -84,27 +84,27 @@ along with tables called '**_cities_weather_**' and '**_favorite_cities_**'.
 1. **Choose app environment**  
    In the **_.env_** file you can choose the environment mode (development / production).
    *  `NODE_ENV=development`  
-         Will tell the server to use dummy data (stored in the server directory) instead of fetching data from <a href="https://developer.accuweather.com/apis">AccuWeather API</a>
+         Will tell the server to use dummy data (stored in the server directory) instead of fetching data from <a href="https://developer.accuweather.com/apis" target="_blank">AccuWeather API</a>
    *  `NODE_ENV=production`
-         Will tell the server to use data fetched from <a href="https://developer.accuweather.com/apis">AccuWeather API</a>
+         Will tell the server to use data fetched from <a href="https://developer.accuweather.com/apis" target="_blank">AccuWeather API</a>
 2. **Start the application**  
    To start the entire application (client and server),  
    go to the '**_server_**' directory and run `npm run dev`.  
 
 <h2>USAGE:</h2>  
 
-1. **Open the browser on <a href="http://localhost:5173/">http://localhost:5173/</a>**  
+1. **Open the browser on <a href="http://localhost:5173/" target="_blank">http://localhost:5173/</a>**  
 
    <img width="1000" alt="image" src="https://github.com/adilev7/Adi-Lev-14-01-2024-FullStack/assets/71292432/d8bbe499-de47-4d79-9a15-108ab9cfb28c">  
    
    **Any user that enters the app for the first time receives a '_User ID_' from the server, the ID is saved in the browser's local storage for later use**.  
 
 2. **Type a name of a city**  
-   This should give you a list of cities to choose from via the <a href="https://developer.accuweather.com/apis">AccuWeather API</a>.
+   This should give you a list of cities to choose from via the <a href="https://developer.accuweather.com/apis" target="_blank">AccuWeather API</a>.
 
 3. **Choose a city**
    This should look for the city's weather data in database,  
-   if not found, it will fetch the data from <a href="https://developer.accuweather.com/apis">AccuWeather API</a> and add it to the database.  
+   if not found, it will fetch the data from <a href="https://developer.accuweather.com/apis" target="_blank">AccuWeather API</a> and add it to the database.  
    
 4. **Add to favorites**
    Mark a city as favorite by clicking on the star icon,  
