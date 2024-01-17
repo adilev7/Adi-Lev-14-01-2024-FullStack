@@ -4,51 +4,36 @@ require("dotenv").config();
 const {
   buildCurrentConditionsUrl,
   buildLocationsUrl,
+  buildCitiesArr,
+  buildCityWeatherObj,
+  dummyData,
 } = require("../utils/accuweather-api");
 
-// DEV
-// const { dummyData } = require("../utils/accuweather-api");
+const IS_DEV_MODE = process.env.NODE_ENV === "development";
 
 const getCitiesByQuery = async (query = "") => {
-  /* PROD */
+  if (IS_DEV_MODE) {
+    return buildCitiesArr(dummyData.locations);
+  }
+
   try {
     const url = buildLocationsUrl("cities/autocomplete", { q: query });
     const { data } = await axios.get(url);
-    return data.map((city) => {
-      const { Key, LocalizedName } = city;
-      return {
-        key: Key,
-        name: LocalizedName,
-      };
-    });
+    return buildCitiesArr(data);
   } catch (err) {
     console.log(err);
   }
-
-  /* DEV */
-  // return dummyData.locations.map((city) => {
-  //   const { Key, LocalizedName } = city;
-  //   return {
-  //     key: Key,
-  //     name: LocalizedName,
-  //   };
-  // });
 };
 
 const getCityWeather = async (cityKey) => {
+  if (IS_DEV_MODE) {
+    return buildCityWeatherObj(dummyData.currentConditions[0]);
+  }
+
   try {
-    /* PROD */
     const url = buildCurrentConditionsUrl(cityKey);
     const { data } = await axios.get(url);
-    const { WeatherText, Temperature } = data[0];
-
-    /* DEV */
-    // const { WeatherText, Temperature } = dummyData.currentConditions[0];
-
-    return {
-      text: WeatherText,
-      temperature: Temperature.Metric.Value,
-    };
+    return buildCityWeatherObj(data[0]);
   } catch (err) {
     console.log(err);
   }

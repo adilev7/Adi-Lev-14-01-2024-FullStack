@@ -51,9 +51,25 @@ const buildLocationsUrl = (path = "", queryParams) =>
     queryParams
   );
 
+const buildCitiesArr = (cities) =>
+  cities.map((city) => {
+    const { Key, LocalizedName } = city;
+    return {
+      key: Key,
+      name: LocalizedName,
+    };
+  });
+
+const buildCityWeatherObj = ({ WeatherText, Temperature }) => ({
+  text: WeatherText,
+  temperature: Temperature.Metric.Value,
+});
+
 module.exports = {
   dummyData,
   buildApiUrl,
   buildCurrentConditionsUrl,
   buildLocationsUrl,
+  buildCitiesArr,
+  buildCityWeatherObj,
 };
